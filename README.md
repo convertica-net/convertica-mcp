@@ -1,6 +1,17 @@
-# Convertica MCP Server
+<div align="center">
+  <img src="https://convertica.net/static/favicon-192x192.png" width="88" height="88" alt="Convertica" />
 
-Convert files without leaving your AI assistant. This [MCP](https://modelcontextprotocol.io) server connects Claude, Cursor, Windsurf or any MCP client to [Convertica](https://convertica.net) — 35+ document and image conversion tools behind one API.
+  # Convertica MCP Server
+
+  Convert files without leaving your AI assistant. Connect Claude, Cursor, Windsurf or any [MCP](https://modelcontextprotocol.io) client to [Convertica](https://convertica.net) and its 35+ document and image conversion tools.
+
+  [![npm version](https://img.shields.io/npm/v/convertica-mcp?color=cb3837&logo=npm)](https://www.npmjs.com/package/convertica-mcp)
+  [![npm downloads](https://img.shields.io/npm/dm/convertica-mcp?color=cb3837)](https://www.npmjs.com/package/convertica-mcp)
+  [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
+  [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-net.convertica%2Fmcp-6E56CF)](https://registry.modelcontextprotocol.io)
+
+  [Website](https://convertica.net) · [API docs](https://convertica.net/api/) · [npm](https://www.npmjs.com/package/convertica-mcp)
+</div>
 
 ```
 "Convert ~/Downloads/report.pdf to Word"
@@ -16,7 +27,7 @@ Convert files without leaving your AI assistant. This [MCP](https://modelcontext
 | `list_converters` | Lists all 35+ converters with their options |
 | `convert_file` | Runs a converter on local file(s) and saves the result |
 
-Supported conversions include: **PDF ⇄ Word / Excel / PowerPoint / JPG / HTML / Markdown / Text / EPUB**, **PDF → PDF/A**, **HTML / URL → PDF**, **merge / split / compress / rotate / crop / watermark / sign / protect / unlock PDF**, **image convert / optimize / HEIC → JPG·PNG·PDF**, and more — full list via `list_converters` or at [convertica.net](https://convertica.net/).
+Supported conversions include: **PDF ⇄ Word / Excel / PowerPoint / JPG / HTML / Markdown / Text / EPUB**, **PDF → PDF/A**, **HTML / URL → PDF**, **merge / split / compress / rotate / crop / watermark / sign / protect / unlock PDF**, **image convert / optimize / HEIC → JPG·PNG·PDF**, and more. Full list via `list_converters` or at [convertica.net](https://convertica.net/).
 
 ## Setup
 
