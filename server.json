@@ -3,7 +3,7 @@
   "name": "net.convertica/mcp",
   "description": "Convert PDF, Word, Excel, PowerPoint, EPUB, HEIC and images — 35+ conversion tools from convertica.net",
   "repository": {
-    "url": "https://github.com/REPLACE-ME/convertica-mcp",
+    "url": "https://github.com/convertica-net/convertica-mcp",
     "source": "github"
   },
   "version": "0.1.0",
