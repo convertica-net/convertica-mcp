@@ -34,6 +34,13 @@
   ],
   "author": "Convertica <support@convertica.net> (https://convertica.net)",
   "homepage": "https://convertica.net/api/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/convertica-net/convertica-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/convertica-net/convertica-mcp/issues"
+  },
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.15.0",
