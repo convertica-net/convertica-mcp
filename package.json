@@ -1,6 +1,6 @@
 {
   "name": "convertica-mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MCP server for Convertica — convert PDF ⇄ Word, Excel, PowerPoint, JPG, HTML, Markdown, EPUB, PDF/A, merge/split/compress/protect PDFs and convert images (HEIC, WebP, …) straight from Claude, Cursor or any MCP client.",
   "type": "module",
   "bin": {
@@ -46,5 +46,5 @@
     "@modelcontextprotocol/sdk": "^1.15.0",
     "zod": "^3.25.0"
   },
-  "mcpName": "io.github.convertica-net/convertica-mcp"
+  "mcpName": "net.convertica/mcp"
 }
