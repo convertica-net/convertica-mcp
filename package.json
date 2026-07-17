@@ -1,0 +1,43 @@
+{
+  "name": "convertica-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Convertica — convert PDF ⇄ Word, Excel, PowerPoint, JPG, HTML, Markdown, EPUB, PDF/A, merge/split/compress/protect PDFs and convert images (HEIC, WebP, …) straight from Claude, Cursor or any MCP client.",
+  "type": "module",
+  "bin": {
+    "convertica-mcp": "src/index.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "smoke": "node test/smoke.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "pdf",
+    "converter",
+    "pdf-to-word",
+    "word-to-pdf",
+    "merge-pdf",
+    "compress-pdf",
+    "heic",
+    "claude",
+    "ai-tools",
+    "convertica"
+  ],
+  "author": "Convertica <support@convertica.net> (https://convertica.net)",
+  "homepage": "https://convertica.net/api/",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.0",
+    "zod": "^3.25.0"
+  },
+  "mcpName": "net.convertica/mcp"
+}

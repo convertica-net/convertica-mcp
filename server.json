@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "net.convertica/mcp",
+  "description": "Convert PDF, Word, Excel, PowerPoint, EPUB, HEIC and images — 35+ conversion tools from convertica.net",
+  "repository": {
+    "url": "https://github.com/REPLACE-ME/convertica-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "convertica-mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "CONVERTICA_API_KEY",
+          "description": "API key from https://convertica.net/users/api-keys/",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

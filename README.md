@@ -1,0 +1,61 @@
+# Convertica MCP Server
+
+Convert files without leaving your AI assistant. This [MCP](https://modelcontextprotocol.io) server connects Claude, Cursor, Windsurf or any MCP client to [Convertica](https://convertica.net) — 35+ document and image conversion tools behind one API.
+
+```
+"Convert ~/Downloads/report.pdf to Word"
+"Merge these three PDFs and compress the result"
+"Turn this HEIC photo into a JPG"
+"Render https://example.com as a PDF"
+```
+
+## Tools
+
+| MCP tool | What it does |
+|---|---|
+| `list_converters` | Lists all 35+ converters with their options |
+| `convert_file` | Runs a converter on local file(s) and saves the result |
+
+Supported conversions include: **PDF ⇄ Word / Excel / PowerPoint / JPG / HTML / Markdown / Text / EPUB**, **PDF → PDF/A**, **HTML / URL → PDF**, **merge / split / compress / rotate / crop / watermark / sign / protect / unlock PDF**, **image convert / optimize / HEIC → JPG·PNG·PDF**, and more — full list via `list_converters` or at [convertica.net](https://convertica.net/).
+
+## Setup
+
+You need a Convertica API key: subscribe at [convertica.net/pricing](https://convertica.net/pricing/), then create a key at [convertica.net/users/api-keys](https://convertica.net/users/api-keys/). API docs: [convertica.net/api/docs](https://convertica.net/api/docs/).
+
+### Claude Code
+
+```bash
+claude mcp add convertica -e CONVERTICA_API_KEY=cvk_live_... -- npx -y convertica-mcp
+```
+
+### Claude Desktop / Cursor / Windsurf
+
+```json
+{
+  "mcpServers": {
+    "convertica": {
+      "command": "npx",
+      "args": ["-y", "convertica-mcp"],
+      "env": { "CONVERTICA_API_KEY": "cvk_live_..." }
+    }
+  }
+}
+```
+
+## Usage notes
+
+- Files are read from and written to your local disk; results are saved next to the input file unless you pass `output_dir`.
+- Conversions run synchronously over HTTPS; processed files are deleted from Convertica's servers right after the response ([details](https://convertica.net/privacy/)).
+- API calls are metered against your plan's monthly quota; failed calls are not counted.
+
+## Development
+
+```bash
+npm install
+npm run smoke                        # protocol check, no key needed
+CONVERTICA_API_KEY=... npm run smoke # + one real conversion
+```
+
+## License
+
+MIT. Not affiliated with Anthropic; "Convertica" is the service behind [convertica.net](https://convertica.net).
