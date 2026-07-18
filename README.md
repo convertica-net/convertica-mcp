@@ -9,6 +9,7 @@
   [![npm downloads](https://img.shields.io/npm/dm/convertica-mcp?color=cb3837)](https://www.npmjs.com/package/convertica-mcp)
   [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
   [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-net.convertica%2Fmcp-6E56CF)](https://registry.modelcontextprotocol.io)
+  [![convertica-mcp MCP server](https://glama.ai/mcp/servers/convertica-net/convertica-mcp/badges/score.svg)](https://glama.ai/mcp/servers/convertica-net/convertica-mcp)
 
   [Website](https://convertica.net) · [API docs](https://convertica.net/api/) · [npm](https://www.npmjs.com/package/convertica-mcp)
 </div>
