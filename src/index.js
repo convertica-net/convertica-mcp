@@ -113,7 +113,8 @@ async function runConversion({ tool, files = [], options = {}, output_dir }) {
     }
     const hints = {
       401: "Check that CONVERTICA_API_KEY is valid and your subscription is active.",
-      403: "Your plan may not include this operation.",
+      // The API answers 403 both for a bad/expired key and for a plan that lacks the tool.
+      403: "Check that CONVERTICA_API_KEY is valid and active — or your plan may not include this operation.",
       429: "Monthly API quota exhausted or rate limit hit — see https://convertica.net/pricing/.",
     };
     throw new Error(`Convertica API ${res.status} on ${spec.path}: ${detail} ${hints[res.status] || ""}`.trim());
@@ -151,11 +152,10 @@ server.registerTool(
   {
     title: "Convert a file with Convertica",
     description:
-      "Run one of convertica.net's conversion tools on local file(s) and save the result next to the input " +
-      "(or into output_dir). Use list_converters to see tool slugs and per-tool options. " +
+      "Run one of convertica.net's 35+ conversion tools on local file(s) and save the result next to the input " +
+      "(or into output_dir). Requires authentication via the CONVERTICA_API_KEY env var. Use list_converters for tool slugs and options. " +
       "Examples: {tool: 'pdf-to-word', files: ['/docs/report.pdf']}; " +
-      "{tool: 'pdf-organize/merge', files: ['/a.pdf', '/b.pdf']}; " +
-      "{tool: 'url-to-pdf', options: {url: 'https://example.com'}}.",
+      "{tool: 'pdf-organize/merge', files: ['/a.pdf','/b.pdf']}.",
     inputSchema: {
       tool: z.string().describe("Tool slug from list_converters, e.g. 'pdf-to-word' or 'pdf-organize/merge'"),
       files: z.array(z.string()).optional().describe("Absolute paths of input file(s). Order matters for multi-file tools."),
