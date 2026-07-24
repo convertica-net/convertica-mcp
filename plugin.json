@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "convertica",
+  "version": "0.1.3",
+  "description": "Convert PDF, Word, Excel, PowerPoint, EPUB, HEIC and images with 35+ tools from convertica.net, straight from your AI client.",
+  "author": {
+    "name": "Convertica",
+    "email": "support@convertica.net",
+    "url": "https://convertica.net"
+  },
+  "homepage": "https://convertica.net/api/",
+  "repository": "https://github.com/convertica-net/convertica-mcp",
+  "license": "MIT",
+  "keywords": ["pdf", "converter", "document-conversion", "office", "heic", "mcp"]
+}
